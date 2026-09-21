@@ -5,25 +5,25 @@
 
 # GO!!
 
-defaultUser = "Itadori"
-defaultPass = "itaJJK_0"
-print("Welcome User, Please Answer the following")
+userName = "Maple"
+userPassWord = "W@ndaVision19"
+print("Welcome, Please Login..")
 
-tries = 0
-while tries < 3:
-    query1 = input("Type in your username: ")
-    query2 = input("Enter Password: ")
+entry = 0
+while entry < 3:
+    ask1 = input("Username: ")
+    ask2 = input("Password: ")
 
-    tries += 1
-
-    if query1 == defaultUser and query2 == defaultPass:
-        print(f"Welcome {query1}!")
+    entry += 1
+    if ask1 == userName and ask2 == userPassWord:
+        print(f"Welcome, {ask1}!")
         break
-    elif query1 == defaultUser and query2 != defaultPass:
-        print(f"Invalid Password, {tries} attempt, {3 - tries} left.")
-    elif query1 != defaultUser and query2 == defaultPass:
-        print(f"Incorrect Username, {tries} attempt, {3 - tries} left.")
-    elif query1 != defaultUser and query2 != defaultPass:
-        print(f"Wrong credentials, {tries} attempt, {3 - tries} left.")
+
+    elif ask1 == userName and ask2 != userPassWord:
+        print(f"Invalid Password, {entry} attempt(s), {3 - entry} entries left")
+    elif ask1 != userName and ask2 == userPassWord:
+        print(f"Invalid Username, {entry} attempt(s), {3 - entry} entries left")
+    elif ask1 != userName and ask2 != userPassWord:
+        print(f"Invalid Username and Password! {entry} attempt(s), {3 - entry} entries left")
 else:
-    print("Out of Attempts")
+    print("Out of attempts")
